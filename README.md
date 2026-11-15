@@ -10,8 +10,6 @@ This repository covers MPNet-based mNSRL, signed PMC–MTL connectivity, partici
 negative-semantic-recurrence/
 ├── config/
 │   └── imaging_exclusions.txt
-├── results/
-│   └── .gitkeep
 ├── scripts/
 │   ├── 00_prepare_inputs.py
 │   ├── 01_extract_connectivity.py
@@ -28,10 +26,10 @@ negative-semantic-recurrence/
 Download the publicly released [OpenNeuro ds006067 v2.0.0](https://openneuro.org/datasets/ds006067/versions/2.0.0) fMRIPrep derivatives and [OSF Think Aloud Behavioral Data](https://osf.io/a56rm/).
 
 - **Behavioral data:** Extracted OSF directory (or original ZIP), including sentence-level emotional-intensity annotations, timestamped transcripts, and `ThinkAloudQuestionnaires_summary.csv`.
-- **Participant metadata:** Original `participants.txt` (or `participants.tsv`) containing participant IDs, age, and sex when available.
+- **Participant metadata:** Original `participants.txt` containing participant IDs, age, and sex when available.
 - **fMRI:** Preprocessed BOLD images and confounds TSV files in the fMRIPrep derivatives directory.
 
-`config/imaging_exclusions.txt` specifies the participants excluded by imaging quality control. Step 0 automatically selects participants not in that list who have complete ATQ-30, age, sex, and sentence-level annotation data; no separate manuscript-subject list is needed. Step 1 uses the selected participants generated in Step 0. For the released dataset and exclusion criteria described in the manuscript, the expected final analytic sample is **N = 43**. Review `results/tables/source_report.json` and the final N printed by Step 3 to verify the cohort. Source questionnaire scores and emotional-intensity annotations are not recomputed. No raw participant data are distributed in this repository.
+`config/imaging_exclusions.txt` specifies the participants excluded by imaging quality control (see OpenNeuro ds006067 v2.0.0).
 
 ## Installation
 
@@ -98,5 +96,3 @@ All generated outputs are written to `results/`:
 - `results/inputs/`: standardized participant and sentence tables.
 - `results/tables/`: source QC, selected participant IDs, semantic recurrence, FC/SVD, statistical results, and mediation outputs.
 - `results/figures/`: Figure 1–4 PNG/TIFF files, panel-source CSV files, and `ci_summary.csv`.
-
-Sentence-order permutations use seed `20260822`. Participant bootstrap analyses and R mediation use seed `42` by default. All plotting helpers are included in `utils.py`.
