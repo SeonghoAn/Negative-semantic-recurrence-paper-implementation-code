@@ -1,6 +1,6 @@
 # Negative semantic recurrence during spontaneous thought
 
-Code for reproducing the main analyses and quantitative figures in *Negative semantic recurrence during spontaneous thought relates to automatic thought tendency and posterior parahippocampal connectivity organization*.
+Code for reproducing the main analyses and quantitative figures in *Negative semantic recurrence in spontaneous thought relates to automatic thought tendency and posterior parahippocampal connectivity organization*.
 
 ## Structure
 
